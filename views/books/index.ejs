@@ -14,10 +14,12 @@
     </div>
   <button type="submit">Search</button>
 </form>
-<div>sadf
+<div>
   <% books.forEach(book => { %>
     <h2><%= book.title %></h2>
     <p><%= book.publishDate %></p>
-    <img height="150" width="100" src="<%= book.coverImagePath %>">
+    <a href="/books/<%= book.id %>">
+      <img height="150" width="100" src="<%= book.coverImagePath %>">
+    </a>
   <% }) %>
 </div>
